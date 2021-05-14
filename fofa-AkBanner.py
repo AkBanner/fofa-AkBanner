@@ -38,7 +38,6 @@ def fofa():
             size = input("\033[1;36m查询条数 >>>\033[0m")
             sentence = base64.b64encode(sentence.encode('utf-8')).decode("utf-8")
             # 查询语句
-            # https://fofa.so/api/v1/search/all?email=zhangweifeng@secpt.com.cn&key=6d246c166f2ce3c7bce66cc52e4f3572&size=1000&qbase64=dGl0bGU9IuWlpee+juWumiI=
             url = "https://fofa.so/api/v1/search/all?email=" + email + "&key=" + key + "&size=" + size + "&qbase64=" + sentence
             response = requests.get(url, headers=header)
             file_name = "result.txt"
